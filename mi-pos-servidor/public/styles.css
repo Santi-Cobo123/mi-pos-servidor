@@ -1,0 +1,58 @@
+:root{--azul:#1f6feb;--azul-osc:#0b3d91;--bg:#f3f5f9;--card:#fff;--txt:#1b2430;--gris:#6b7685;--verde:#16a34a;--rojo:#dc2626;--borde:#e3e7ee}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Segoe UI,Arial,sans-serif}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--txt);min-height:100vh}
+#shell{display:flex;min-height:100vh}
+aside{width:220px;background:var(--azul-osc);color:#fff;padding:18px 12px;flex-shrink:0}
+aside h1{font-size:18px;margin:0 8px 20px;word-break:break-word}
+aside button{display:block;width:100%;text-align:left;background:none;border:0;color:#cfe0ff;padding:11px 12px;border-radius:8px;font-size:15px;cursor:pointer;margin-bottom:4px}
+aside button.on,aside button:hover{background:var(--azul);color:#fff}
+main{flex:1;padding:22px;overflow:auto;min-width:0}
+h2{margin-bottom:14px}
+h3{margin-bottom:10px}
+.card{background:var(--card);border:1px solid var(--borde);border-radius:12px;padding:16px;margin-bottom:16px;overflow-x:auto}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+input,select{padding:9px 11px;border:1px solid var(--borde);border-radius:8px;font-size:14px;background:#fff}
+label{display:block;font-size:13px;color:var(--gris)}
+.btn{background:var(--azul);color:#fff;border:0;border-radius:8px;padding:9px 16px;font-size:14px;cursor:pointer}
+.btn:hover{opacity:.9}.btn.verde{background:var(--verde)}.btn.rojo{background:var(--rojo)}.btn.gris{background:#8a94a3}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:9px 8px;text-align:left;border-bottom:1px solid var(--borde)}
+th{color:var(--gris);font-weight:600;font-size:12px;text-transform:uppercase}
+.pos{display:grid;grid-template-columns:1fr 380px;gap:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
+.prod{background:#fff;border:1px solid var(--borde);border-radius:10px;padding:12px;cursor:pointer;text-align:center}
+.prod:hover{border-color:var(--azul);box-shadow:0 2px 8px #1f6feb33}
+.prod b{display:block;font-size:14px;margin-bottom:4px;word-break:break-word}
+.prod span{color:var(--azul);font-weight:700}
+.prod small{display:block;color:var(--gris);margin-top:3px}
+.tot{font-size:14px;margin-top:10px}.tot div{display:flex;justify-content:space-between;padding:3px 0}
+.tot .grande{font-size:22px;font-weight:800;border-top:2px solid var(--borde);margin-top:6px;padding-top:8px}
+.badge{padding:3px 9px;border-radius:20px;font-size:12px;font-weight:600}
+.abierta{background:#dcfce7;color:#166534}.cerrada{background:#fee2e2;color:#991b1b}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.stat{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:16px}
+.stat small{color:var(--gris)}.stat b{display:block;font-size:24px;margin-top:4px}
+.qty button{width:26px;height:26px;border:1px solid var(--borde);background:#fff;border-radius:6px;cursor:pointer}
+.aviso{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:12px;border-radius:10px;margin-bottom:14px}
+.col{display:flex;flex-direction:column;gap:10px;max-width:380px}
+.col input,.col select{width:100%}
+#usr{margin-top:24px;padding-top:14px;border-top:1px solid #ffffff33;color:#cfe0ff;font-size:14px}
+#usr div{margin:0 8px 8px;word-break:break-word}
+.toast{position:fixed;top:20px;right:20px;background:var(--verde);color:#fff;padding:14px 20px;border-radius:10px;font-size:16px;font-weight:700;z-index:99999;box-shadow:0 4px 14px #0004;max-width:360px}
+.toast.err{background:var(--rojo)}
+
+/* Login / Crear cuenta */
+#auth{position:fixed;inset:0;z-index:10000;background:linear-gradient(135deg,#0b3d91,#1f6feb);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto}
+.authbox{background:#fff;border-radius:16px;padding:32px 28px;width:100%;max-width:380px;display:flex;flex-direction:column;gap:12px;box-shadow:0 20px 50px #0005}
+.authbox h1{text-align:center;color:var(--azul-osc)}
+.authbox p{text-align:center;color:var(--gris)}
+.authbox input{width:100%}
+.authbox .btn{padding:12px;font-size:16px}
+.authbox .err{color:var(--rojo);font-size:13px;min-height:16px;text-align:center}
+.authbox .rec{font-size:14px;color:var(--gris);display:flex;gap:6px;align-items:center}
+.authbox .rec input{width:auto}
+.authbox a{color:var(--azul);font-weight:600}
+
+@media(max-width:900px){.pos{grid-template-columns:1fr}aside{width:170px}}
+@media(max-width:600px){#shell{flex-direction:column}aside{width:100%}main{padding:14px}}

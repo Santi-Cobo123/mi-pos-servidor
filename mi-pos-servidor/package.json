@@ -1,0 +1,22 @@
+{
+  "name": "mi-pos-servidor",
+  "version": "1.0.0",
+  "description": "Sistema de punto de venta (POS) con servidor Node.js, SQLite y cuentas por tienda",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.22.3",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
